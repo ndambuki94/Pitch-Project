@@ -104,4 +104,4 @@ def new_comment(id):
         new_comment.save_comment()
         return redirect(url_for('.category', id=pitches.category_id))
 
-
+    return render_template('comment.html', comment_form=form)
