@@ -6,20 +6,20 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
 
-<nav class="navbar navbar-default navbar-top-" role="navigation" style="background-color:lightgreen" height: auto%; width: auto%;">
+<nav class="navbar navbar-default navbar-top-" role="navigation" style="background-color: yellowgreen" height: auto%; width: auto%;">
   <div class="container-row">
 
     <div id="navbar" class="navbar-collapse collapse">
       <div class="col-md-4">
         <li class="nav-item" id="home" style="list-style-type: none;">
-        <a class="nav-link" href="{{url_for('main.index')}}" style="color: black; font-family:cursive; font-size: 4em; margin-right: 60%;">Home</a>
+        <a class="nav-link" href="{{url_for('main.index')}}" style="color: blueviolet; font-family:cursive; font-size: 3em; margin-right: 30%;">Home</a>
         </li>
       </div>
       <div class="col-md-4">
-            <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav">
 
             <li class="dropdown">
-              <a href="{{url_for('main.index')}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"style="color: black; font-family: cursive; font-size: 4em;">Categories</a>
+              <a href="{{url_for('main.index')}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"style="color: blueviolet; font-family: cursive; font-size: 3em;">Categories</a>
               <ul class="dropdown-menu multi-level" role="menu">
                 <li><a href="{{url_for('main.index')}}">Positive</a></li>
                 <li><a href="{{url_for('main.index')}}">Inspiration</a></li>
@@ -29,12 +29,12 @@
                 <li><a href="{{url_for('main.index')}}">family</a></li>
               </ul>
             </li>
-        </ul>
+         </ul>
       </div>
       <div class="col-md-4">
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: black; font-family:cursive; font-size: 4em;">LOG IN</a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: blueviolet; font-family:cursive; font-size: 3em;">LOG IN</a>
                 <ul class="dropdown-menu">
                 {% if current_user.is_authenticated %}
 
@@ -47,7 +47,7 @@
                   </li>
 
                   <li class="nav-item" id="sign-in">
-                      <a class="nav-link" href="{{url_for('auth.register')}}"style="color: black; float: right; font-size:25px list-style-type: none; padding-right: 15px;  padding-bottom: 15px;">Sign up</a>
+                      <a class="nav-link" href="{{url_for('auth.register')}}"style="color: black; float: right; font-size:35px list-style-type: none;   padding-bottom: 15px;">Sign up</a>
                   </li>
 
 
