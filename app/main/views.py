@@ -5,6 +5,28 @@ from ..models import User, Category, Pitches, Comments
 from .forms import UpdateProfile , CommentForm,PitchForm
 from .. import db, photos
 
+@main.route('/')
+def index():
+    """View root page function that returns index page and the various news sources"""
+
+    title = 'Pitch'
+
+    return render_template('index.html', title=title)
+
+#  adding a new pitch Route
+@main.route('/category/<int:id>')
+def category(id):
+    '''
+    category route function returns a list of pitches in the category chosen
+    '''
+
+    category = Category.query.get(id)
+
+    if category is None:
+        abort(404)
+
+    pitches = Pitches.get_pitches(id)
+    return render_template('category.html', category=category, pitches=pitches)
 
 @main.route('/category/pitch/new/', methods=['GET', 'POST'])
 def new_pitch():
